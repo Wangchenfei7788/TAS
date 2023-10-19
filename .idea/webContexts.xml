@@ -3,6 +3,8 @@
   <component name="WebContextManager">
     <option name="state">
       <map>
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/frmWeb/logo.jsp" value="file://$PROJECT_DIR$/src/main/webapp/frmWeb" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/frmWeb/menu.html" value="file://$PROJECT_DIR$/src/main/webapp/frmWeb" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/login.html" value="file://$PROJECT_DIR$/src/main/webapp" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/main.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/validate.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />

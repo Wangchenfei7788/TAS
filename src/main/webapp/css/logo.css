@@ -1,0 +1,85 @@
+.bottom-line {
+	background-image: url(../images/logo/top_logo_bottom_line_bg.gif);
+	background-repeat: repeat-x;
+}
+.logo-bg {
+	background-image: url(../images/logo/top_logo_bg.gif);
+	background-repeat: repeat-x;
+	height: 33px;
+	background-position: left center;
+}
+.logo {
+	background-image: url(../images/logo/logo.gif);
+	background-repeat: no-repeat;
+	height: 33px;
+	width: 330px;
+	background-position: 12px;
+}
+.login-text {
+	font-size: 12px;
+	color: #333333;
+	vertical-align: bottom;
+}
+
+.right-button-left {
+	background-image: url(../images/logo/top_logo_r_b_left.gif);
+	background-repeat: no-repeat;
+	height: 29px;
+	width: 9px;
+}
+.right-button-right {
+	background-image: url(../images/logo/top_logo_r_b_right.gif);
+	background-repeat: no-repeat;
+	height: 29px;
+	width: 9px;
+}
+.right-button-bg {
+	background-image: url(../images/logo/top_logo_r_b_bg.gif);
+	background-repeat: repeat;
+}
+.button-help-mouseout {
+	background-image: url(../images/logo/top_logo_r_b_help.gif);
+	background-repeat: no-repeat;
+	height: 29px;
+	width: 57px;
+}
+.button-split-line {
+	background-image: url(../images/logo/top_logo_r_b_split_line.gif);
+	background-repeat: no-repeat;
+	height: 29px;
+	width: 22px;
+	background-position: center;
+}
+.button-mpwd-mouseout {
+	background-image: url(../images/logo/top_logo_r_b_mpwd.gif);
+	background-repeat: no-repeat;
+	height: 29px;
+	width: 77px;
+}
+.button-logout-mouseout {
+	background-image: url(../images/logo/top_logo_r_b_logout.gif);
+	background-repeat: no-repeat;
+	height: 29px;
+	width: 53px;
+}
+.button-help-mouseover {
+
+	background-image: url(../images/logo/top_logo_r_b_help2.gif);
+	background-repeat: no-repeat;
+	height: 29px;
+	width: 57px;
+}
+.button-logout-mouseover {
+
+	background-image: url(../images/logo/top_logo_r_b_logout2.gif);
+	background-repeat: no-repeat;
+	height: 29px;
+	width: 53px;
+}
+.button-mpwd-mouseover {
+
+	background-image: url(../images/logo/top_logo_r_b_mpwd2.gif);
+	background-repeat: no-repeat;
+	height: 29px;
+	width: 77px;
+}

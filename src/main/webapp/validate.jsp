@@ -30,6 +30,7 @@
             &&(rs.getString("userpwd").compareTo(MD5.MD5Encode(pwd))==0)
             &&(rs.getString("usertype").compareTo(tp)==0))
     {
+      session.setAttribute("username",usr);
       validated=true;						//标识为true表示验证成功通过
     }
   }
@@ -40,7 +41,7 @@
   {
     //验证成功跳转到main.jsp
 %>
-<jsp:forward page="main.jsp"/>
+<jsp:forward page="frmWeb/frmMain.jsp"/>
 <%
 }
 else

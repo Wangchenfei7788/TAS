@@ -1,0 +1,5 @@
+.state-bar {
+	background-image: url(../images/state_bar_bg.gif);
+	background-repeat: repeat-x;
+	height: 4px;
+}

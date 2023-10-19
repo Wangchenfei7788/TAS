@@ -1,0 +1,19 @@
+body {
+	background-position: 0px 0px;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+table,tr,td
+{
+    border:0px solid black;
+    border-spacing: 0px;
+    padding: 0px;
+    margin: 0 auto;
+}
+table
+{
+    border-collapse:collapse;
+}    

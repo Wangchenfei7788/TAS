@@ -1,0 +1,35 @@
+.ctrl-bar-up {
+	background-image: url(../images/left/left_ctrl_bar_up.gif);
+	background-repeat: no-repeat;
+	background-position: top;
+	height: 59px;
+	width: 10px;
+}
+.ctrl-bar-bg {
+	background-image: url(../images/left/left_ctrl_bar_bg.gif);
+	background-repeat: repeat;
+	height: 100%;
+	width: 10px;
+}
+.exp_button {
+	background-image: url(../images/left/left_ctrl_button_exp.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 56px;
+	width: 8px;
+}
+.col_button {
+	background-image: url(../images/left/left_ctrl_button_col.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 56px;
+	width: 8px;
+}
+
+.crtl-bar-down {
+	background-image: url(../images/left/left_ctrl_bar_down.gif);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	height: 59px;
+	width: 10px;
+}

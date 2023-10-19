@@ -1,0 +1,244 @@
+table,tr,td
+{
+    border:0px solid black;
+    border-spacing: 0px;
+    padding: 0px;
+    margin: 0 auto;
+}
+table
+{
+    border-collapse:collapse;
+}
+.menu-border-line {
+	background-image: url(../images/menu/menu_border_top_line.gif);
+	background-repeat: repeat-x;
+	height: 2px;
+}
+a:link {
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a:hover {
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	background-color: #F1F5F9;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+}
+
+a:visited {
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+a:active {
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+}
+
+body {
+	font-size: 12px;
+	color: #000000;
+	background-image: url(../images/menu/menu_bg.gif);
+	margin: 0px;
+	padding: 0px;
+	SCROLLBAR-FACE-COLOR: #E5F2FB ; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #FFFFFF; 
+	SCROLLBAR-SHADOW-COLOR: #97A6DA; 
+	SCROLLBAR-3DLIGHT-COLOR: #97A6DA; 
+	SCROLLBAR-ARROW-COLOR: #93A0DA; 
+	SCROLLBAR-TRACK-COLOR: #E9EDF8; 
+	SCROLLBAR-DARKSHADOW-COLOR: #E9EDF8; 
+
+}
+.toolbar-btn-onmouseover {
+	border: 1px solid #FF0000;
+}
+
+.menu-ctrl-bar-left {
+	background-image: url(../images/menu/menu_ctrl_bar_left.gif);
+	background-repeat: no-repeat;
+	height: 20px;
+	width: 9px;
+}
+.menu_class_line {
+	background-repeat: repeat-x;
+	vertical-align: middle;
+	height: 2px;
+	background-image: url(../images/menu/module_class_line.gif);
+}
+
+.menu-ctrl-bar-right {
+	background-image: url(../images/menu/menu_ctrl_bar_right.gif);
+	background-repeat: no-repeat;
+	height: 20px;
+	width: 9px;
+}
+.menu-ctrl-bar-bg {
+	background-image: url(../images/menu/menu_ctrl_bar_bg.gif);
+	background-repeat: repeat-x;
+	height: 20px;
+}
+.menu-link-area-left {
+	background-image: url(../images/menu/menu_link_area_left.gif);
+	background-repeat: repeat-y;
+	height: 20px;
+	width: 4px;
+}
+.menu-link-area-right {
+	background-image: url(../images/menu/menu_link_area_right.gif);
+	background-repeat: repeat-y;
+	height: 20px;
+	width: 4px;
+	background-position: right;
+}
+.menu_classtab_bg {
+	background-image: url(../images/menu/menu_classtab_bg.gif);
+	background-repeat: repeat-x;
+	height: 19px;
+}
+
+
+.menu_classtab_title {
+	font-size: 12px;
+	font-weight: bold;
+	
+	color: #0b51b1;
+	margin-top: 2px;
+	padding-top: 2px;
+}
+.menu-icon {
+	background-image: url(../images/icon1.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.menu-text {
+	font-size: 12px;
+	color: #000000;
+	text-decoration: none;
+	line-height: 170%;
+}
+.menu-link-area-bg {
+	background-image: url(../images/menu/menu_link_area_bg.gif);
+	background-repeat: repeat-x;
+	background-color: #DEEBFB;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+.menu-ctrl-bar-exp-button {
+	background-image: url(../images/menu/menu_exp.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 20px;
+	width: 20px;
+}
+
+.menu-bottom-left {
+	background-image: url(../images/menu/menu_bottom_left.gif);
+	height: 9px;
+	width: 7px;
+	background-repeat: no-repeat;
+}
+.menu-bottom-right {
+	background-image: url(../images/menu/menu_bottom_right.gif);
+	height: 9px;
+	width: 7px;
+	background-repeat: no-repeat;
+}
+.menu-bottom-bg {
+	background-image: url(../images/menu/menu_bottom_bg.gif);
+	background-repeat: repeat-x;
+	height: 9px;
+}
+.menu-ctrl-bar-col-button {
+	background-image: url(../images/menu/menu_col.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 20px;
+	width: 20px;
+}
+.menu-ctrl-bar-title {
+	font-size: 12px;
+	color: #000000;
+	padding-left: 6px;
+	padding-top: 5px;
+	font-weight: bold;
+}
+.menu-border-line2 {
+	background-repeat: repeat-x;
+	height: 1px;
+	background-color: #8cb5e2;
+}
+.toolbar-button
+{
+	BACKGROUND-COLOR: #D3E5FA;
+	BORDER-BOTTOM: #D3E5FA 1px solid;
+	BORDER-LEFT: #D3E5FA 1px	solid;
+	BORDER-RIGHT: #D3E5FA 1px solid;
+	BORDER-TOP:	#D3E5FA 1px solid;
+	HEIGHT: 21px;
+	POSITION: absolute;
+	TOP: 1px;
+	WIDTH: 21px;
+}
+.toolbar-icon
+{
+	HEIGHT: 20px;
+	LEFT: -1px;
+	POSITION: absolute;
+	TOP: -1px;
+	WIDTH: 20px
+}
+.BtnMouseOverUp
+{
+	BACKGROUND-COLOR: #C9D3EF;
+	BORDER-BOTTOM: #255DF3	1px solid;
+	BORDER-LEFT: #255DF3 1px solid;
+	BORDER-RIGHT: #255DF3 1px solid;
+	BORDER-TOP:	#255DF3	1px solid;
+	HEIGHT: 21px;
+	POSITION: absolute;
+	TOP: 1px;
+	WIDTH: 21px
+}
+.BtnMouseOverDown
+{
+	BACKGROUND-COLOR: #C9D3EF;
+	BORDER-BOTTOM: #255DF3 1px solid;
+	BORDER-LEFT: #255DF3 1px solid;
+	BORDER-RIGHT: #255DF3 1px solid;
+	BORDER-TOP:	#255DF3 1px solid;
+	HEIGHT: 21px;
+	POSITION: absolute;
+	TOP: 1px;
+	WIDTH: 21px
+}
+.BtnDown
+{
+	BACKGROUND-COLOR: #DCDCDC;
+	BORDER-BOTTOM: #D3E5FA 1px solid;
+	BORDER-LEFT: #D3E5FA 1px solid;
+	BORDER-RIGHT: #D3E5FA 1px solid;
+	BORDER-TOP:	#D3E5FA 1px solid;
+	HEIGHT: 21px;
+	POSITION: absolute;
+	TOP: 1px;
+	WIDTH: 21px
+}
+.IcoDown
+{
+	HEIGHT: 21px;
+	LEFT: 0px;
+	POSITION: absolute;
+	TOP: 0px;
+	WIDTH: 21px
+}

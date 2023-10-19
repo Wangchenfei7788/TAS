@@ -1,0 +1,316 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>功能菜单</title>
+<link href="../css/menu.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+	function displayOrHideMenu(objID){
+		var e = document.getElementById("menu_" + objID);
+		if(e.style.display==""){
+			e.style.display="none";
+		}else{
+			e.style.display="";
+		}
+
+		var obj = document.getElementById("menu_title_" + objID);
+		if(obj){
+			if(e.style.display==""){
+				obj.className = "menu-ctrl-bar-exp-button";
+			}else{
+				obj.className = "menu-ctrl-bar-col-button";
+			}	
+		}		
+	}
+
+</script>
+</head>
+<body>
+	<table style="width: 100%;">
+		<tr>
+			<td class="menu-border-line"></td>
+		</tr>
+	</table>
+    <table style="width: 100%;">
+      <tr>
+        <td height="8"></td>
+      </tr>  
+    </table>
+
+    <!-- ========================文章管理start==================== -->
+	<table style="width: 94%;text-align: center;">
+		<tr>
+			<td class="menu-ctrl-bar-left"></td>
+			<td class="menu-ctrl-bar-bg"><table style="width: 100%">
+					<tr style="cursor:pointer" onClick="displayOrHideMenu('module_article')">
+						<td style="width: 157px" class="menu-ctrl-bar-title">文章管理</td>
+						<td style="width: 25px" id="menu_title_module_article" class="menu-ctrl-bar-exp-button">&nbsp;</td>
+					</tr>
+				</table></td>
+			<td class="menu-ctrl-bar-right"></td>
+		</tr>
+	</table>
+	<table style="width: 94%;text-align: center;" id="menu_module_article">
+		<tr>
+			<td class="menu-link-area-left"></td>
+			<td style="height: 10px" class="menu-link-area-bg">
+				<table style="width: 98%">
+					<tr>
+						<td class="menu-icon">&nbsp;</td>
+						<td class="menu-text"><a href="../article/articleAdd.html" target="mainFrame">添加文章</a></td>
+					</tr>
+					<!-- ------------------线条start------------------ -->
+					<tr>
+						<td colspan="2" style="text-align: center;height: 12px">
+							<table style="width: 90%">
+								<tr>
+									<td style="height: 2px;vertical-align: 2"  class="menu_class_line"></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<!-- ------------------线条end------------------ -->
+					<tr>
+						<td class="menu-icon">&nbsp;</td>
+						<td class="menu-text"><a href="../article/articleList.html" target="mainFrame">文章列表</a></td>
+					</tr>
+					<!-- ------------------线条start------------------ -->
+					<tr>
+						<td colspan="2" style="text-align: center;height: 12px">
+							<table style="width: 90%">
+								<tr>
+									<td style="height: 2px;vertical-align: 2"  class="menu_class_line"></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<!-- ------------------线条end------------------ -->
+					
+					<tr>
+						<td class="menu-icon">&nbsp;</td>
+						<td class="menu-text"><a href="../article/articleClassList.html" target="mainFrame">栏目列表</a></td>
+					</tr>
+				</table>
+			</td>
+	
+
+	<td class="menu-link-area-right"></td>
+	</tr>
+	</table>
+	<table style="width: 94%;text-align: center;">
+		<tr>
+			<td class="menu-bottom-left"></td>
+			<td class="menu-bottom-bg">&nbsp;</td>
+			<td class="menu-bottom-right"></td>
+		</tr>
+	</table>
+    <!-- =====================文章管理end======================= -->
+
+	<!-- ========================学生信息管理start==================== -->
+	<table style="width: 94%;text-align: center;">
+		<tr>
+			<td class="menu-ctrl-bar-left"></td>
+			<td class="menu-ctrl-bar-bg"><table style="width: 100%">
+					<tr style="cursor:pointer" onClick="displayOrHideMenu('module_stuMgr')">
+						<td style="width: 157px" class="menu-ctrl-bar-title">学生信息管理</td>
+						<td style="width: 25px" id="menu_title_module_stuMgr" class="menu-ctrl-bar-exp-button">&nbsp;</td>
+					</tr>
+				</table></td>
+			<td class="menu-ctrl-bar-right"></td>
+		</tr>
+	</table>
+	<table style="width: 94%;text-align: center;" id="menu_module_stuMgr">
+		<tr>
+			<td class="menu-link-area-left"></td>
+			<td style="height: 10px" class="menu-link-area-bg">
+				<table style="width: 98%">
+					<tr>
+						<td class="menu-icon">&nbsp;</td>
+						<td class="menu-text"><a href="" target="mainFrame">学生信息录入</a></td>
+					</tr>
+					<tr>
+						<td colspan="2" style="text-align: center;height: 12px">
+							<table style="width: 90%">
+								<tr>
+									<td style="height: 2px;vertical-align: 2"  class="menu_class_line"></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					
+					<tr>
+						<td class="menu-icon">&nbsp;</td>
+						<td class="menu-text"><a href="" target="mainFrame">学生信息列表</a></td>
+					</tr>
+					
+				</table>
+			</td>
+	
+
+	<td class="menu-link-area-right"></td>
+	</tr>
+	</table>
+	<table style="width: 94%;text-align: center;">
+		<tr>
+			<td class="menu-bottom-left"></td>
+			<td class="menu-bottom-bg">&nbsp;</td>
+			<td class="menu-bottom-right"></td>
+		</tr>
+	</table>
+    <!-- =====================学生信息管理end======================= -->
+
+    <!-- ========================专业课程管理start==================== -->
+	<table style="width: 94%;text-align: center;">
+		<tr>
+			<td class="menu-ctrl-bar-left"></td>
+			<td class="menu-ctrl-bar-bg"><table style="width: 100%">
+					<tr style="cursor:pointer" onClick="displayOrHideMenu('module_major')">
+						<td style="width: 157px" class="menu-ctrl-bar-title">专业课程管理</td>
+						<td style="width: 25px" id="menu_title_module_major" class="menu-ctrl-bar-exp-button">&nbsp;</td>
+					</tr>
+				</table></td>
+			<td class="menu-ctrl-bar-right"></td>
+		</tr>
+	</table>
+	<table style="width: 94%;text-align: center;" id="menu_module_major">
+		<tr>
+			<td class="menu-link-area-left"></td>
+			<td class="menu-link-area-bg">
+				<table style="width: 98%">	
+	
+					<tr>
+						<td class="menu-icon">&nbsp;</td>
+						<td class="menu-text"><a href="" target="mainFrame">添加专业</a></td>
+					</tr>
+					<tr>
+						<td class="menu-icon">&nbsp;</td>
+						<td class="menu-text"><a href="" target="mainFrame">专业列表</a></td>
+					</tr>
+					<!-- ------------------线条start------------------ -->
+					<tr>
+						<td colspan="2" style="text-align: center;height: 12px">
+							<table style="width: 90%">
+								<tr>
+									<td style="height: 2px;vertical-align: 2"  class="menu_class_line"></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<!-- ------------------线条end------------------ -->					
+					<tr>
+						<td class="menu-icon">&nbsp;</td>
+						<td class="menu-text"><a href="" target="mainFrame">添加课程</a></td>
+					</tr>
+					<tr>
+						<td class="menu-icon">&nbsp;</td>
+						<td class="menu-text"><a href="" target="mainFrame">课程列表</a></td>
+					</tr>
+				</table>
+			</td>
+			<td class="menu-link-area-right"></td>
+		</tr>
+	</table>
+	<table style="width: 94%;text-align: center;">
+		<tr>
+			<td class="menu-bottom-left"></td>
+			<td class="menu-bottom-bg">&nbsp;</td>
+			<td class="menu-bottom-right"></td>
+		</tr>
+	</table>
+    <!-- =====================专业课程管理end======================= -->
+    
+    <!-- ========================成绩信息管理start==================== -->
+	<table style="width: 94%;text-align: center;">
+		<tr>
+			<td class="menu-ctrl-bar-left"></td>
+			<td class="menu-ctrl-bar-bg"><table style="width: 100%">
+					<tr style="cursor:pointer" onClick="displayOrHideMenu('module_score')">
+						<td style="width: 157px" class="menu-ctrl-bar-title">成绩信息管理</td>
+						<td style="width: 25px" id="menu_title_module_score" class="menu-ctrl-bar-exp-button">&nbsp;</td>
+					</tr>
+				</table></td>
+			<td class="menu-ctrl-bar-right"></td>
+		</tr>
+	</table>
+	<table style="width: 94%;text-align: center;" id="menu_module_score">
+		<tr>
+			<td class="menu-link-area-left"></td>
+			<td class="menu-link-area-bg">
+				<table style="width: 98%">	
+		
+					<tr>
+						<td class="menu-icon">&nbsp;</td>
+						<td class="menu-text"><a href="" target="mainFrame">成绩信息录入</a></td>
+					</tr>
+					<tr>
+						<td class="menu-icon">&nbsp;</td>
+						<td class="menu-text"><a href="" target="mainFrame">成绩信息列表</a></td>
+					</tr>
+				</table>
+			</td>
+			<td class="menu-link-area-right"></td>
+		</tr>
+	</table>
+	<table style="width: 94%;text-align: center;">
+		<tr>
+			<td class="menu-bottom-left"></td>
+			<td class="menu-bottom-bg">&nbsp;</td>
+			<td class="menu-bottom-right"></td>
+		</tr>
+	</table>
+    <!-- =====================成绩信息管理end======================= -->
+
+    <!-- ========================用户管理start==================== -->
+	<table style="width: 94%;text-align: center;">
+		<tr>
+			<td class="menu-ctrl-bar-left"></td>
+			<td class="menu-ctrl-bar-bg"><table style="width: 100%">
+					<tr style="cursor:pointer" onClick="displayOrHideMenu('module_user')">
+						<td style="width: 157px" class="menu-ctrl-bar-title">系统用户管理</td>
+						<td style="width: 25px" id="menu_title_module_user" class="menu-ctrl-bar-exp-button">&nbsp;</td>
+					</tr>
+				</table></td>
+			<td class="menu-ctrl-bar-right"></td>
+		</tr>
+	</table>
+	<table style="width: 94%;text-align: center;" id="menu_module_user">
+		<tr>
+			<td class="menu-link-area-left"></td>
+			<td class="menu-link-area-bg">
+				<table style="width: 98%">				
+					<tr>
+						<td class="menu-icon">&nbsp;</td>
+						<td class="menu-text"><a href="" target="mainFrame">添加登录账号</a></td>
+					</tr>
+					<!-- ------------------线条start------------------ -->
+					<tr>
+						<td colspan="2" style="text-align: center;height: 12px">
+							<table style="width: 90%">
+								<tr>
+									<td style="height: 2px;vertical-align: 2"  class="menu_class_line"></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<!-- ------------------线条end------------------ -->						
+					<tr>
+						<td class="menu-icon">&nbsp;</td>
+						<td class="menu-text"><a href="" target="mainFrame">登录账号列表</a></td>
+					</tr>
+				</table>
+			</td>
+			<td class="menu-link-area-right"></td>
+		</tr>
+	</table>
+	<table style="width: 94%;text-align: center;">
+		<tr>
+			<td class="menu-bottom-left"></td>
+			<td class="menu-bottom-bg">&nbsp;</td>
+			<td class="menu-bottom-right"></td>
+		</tr>
+	</table>
+    <!-- =====================用户管理end======================= -->
+
+   
+
+</body>
+</html>
