@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <style type="text/css">
+        table,tr,td{
+            padding: 0;
+            margin: 0;
+            border: 0;
+            border-spacing: 0;
+        }
+    </style>
+</head>
+<body background="images/login/oper_area_border_top_line.gif">
+   <div style="text-align: center; margin-top: 12%">
+       <table style="width: 100%; height:100%">
+           <tr>
+               <td style="text-align: center">
+                   <table style="width: 597px;margin: 0 auto">
+                       <tr>
+                           <td style="width: 205px"><img src="images/login/lo_03.gif"height="103px"></td>
+                           <td><img src="images/login/lo_04.gif" width="392px" height="103px"></td>
+                       </tr>
+                       <tr>
+                           <td style="width: 205px"><img src="images/login/lo_06.gif" width="205px" height="211px"></td>
+                           <td>
+                               <table style="width: 100%">
+                                   <tr>
+                                       <td style="width: 0;text-align: left"><img src="images/login/lo_07.gif" width="1px" height="211px"></td>
+                                       <td>
+                                           <table>
+                                               <tr>
+                                                   <td style="height: 15px">&nbsp;</td>
+                                               </tr>
+                                               <tr>
+                                                   <td>
+                                                       <table>
+                                                           <tr>
+                                                               <td style="width: 30px;">&nbsp;</td>
+                                                               <td>
+                                                                   <form action="validate.jsp" method="post">
+                                                                       <table style="width: 100%;height: 180px">
+                                                                           <tr>
+                                                                               <td>用户名：</td>
+                                                                               <td> <input type="text" name="username" size="20"/></td>
+                                                                           </tr>
+                                                                           <tr>
+                                                                               <td>密码：</td>
+                                                                               <td><input type="password" name="userpwd" size="20"/></td>
+                                                                           </tr>
+                                                                           <tr>
+                                                                               <td>类型：</td>
+                                                                               <td><select name="usertype">
+                                                                                   <option value="admin">管理员</option>
+                                                                                   <option value="teacher">教师</option>
+                                                                                   <option value="student">学生</option>
+                                                                               </select></td>
+                                                                           </tr>
+                                                                           <tr>
+                                                                               <td colspan="2" align="center">
+                                                                                   <input type="image"src="images/login/dl.gif">
+
+                                                                               </td>
+                                                                           </tr>
+                                                                       </table>
+                                                                   </form>
+                                                               </td>
+                                                           </tr>
+                                                       </table>
+                                                   </td>
+                                               </tr>
+                                           </table>
+                                       </td>
+                                       <td style="width: 0;text-align:right"><img src="images/login/lo_072.gif" width="1px" height="211px"></td>
+                                   </tr>
+                               </table>
+                           </td>
+                       </tr>
+                       <tr>
+                           <td colspan="2"><img src="images/login/lo.gif" width="597px" height="36px"></td>
+                       </tr>
+                       <tr>
+                           <td colspan="2">如果没有注册，点击这里<a href="login.jsp">注册</a>！（21软件2 王晨飞）</td>
+                       </tr>
+                   </table>
+               </td>
+           </tr>
+       </table>
+   </div>
+</body>
+</html>
