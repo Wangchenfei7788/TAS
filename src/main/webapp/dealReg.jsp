@@ -1,6 +1,5 @@
 <%@ page import="java.sql.ResultSet" %>
 <%@ page import="com.wcf.tas.MD5" %>
-
 <%--
   Created by IntelliJ IDEA.
   User: Wangchenfei
@@ -20,34 +19,25 @@
   String usr=request.getParameter("username");			//获取提交的用户名
   String pwd=request.getParameter("userpwd");//获取提交的密码
   String tp=request.getParameter("usertype");
-  boolean validated=false;						//验证成功标识
   //查询userTable表中的记录
-  String sql="select * from user";
-  ResultSet rs=SqlSrvDB.executeQuery(sql);	//取得结果集
-  while(rs.next())
-  {
-    if((rs.getString("username").trim().compareTo(usr)==0)
-            &&(rs.getString("userpwd").compareTo(MD5.MD5Encode(pwd))==0)
-            &&(rs.getString("usertype").compareTo(tp)==0))
-    {
-      validated=true;						//标识为true表示验证成功通过
-    }
-  }
-  rs.close();
+  String sql="insert user(username,userpwd,usertype) values('"+usr+"','"+MD5.MD5Encode(pwd)+"','"+tp+"')";
+  int num=SqlSrvDB.executeInsert(sql);	//取得结果集
+
+
   SqlSrvDB.closeStmt();					//关闭语句
   SqlSrvDB.closeConn();					//关闭连接
-  if(validated)
+  if(num>0)
   {
-    //验证成功跳转到main.jsp
+
 %>
-<jsp:forward page="main.jsp"/>
+注册成功，点击这里进入<a href="login.html">登录</a>页面
 <%
 }
 else
 {
-  //验证失败跳转到error.jsp
+
 %>
-<jsp:forward page="error.jsp"/>
+注册失败，点击这里重新<a href="reg.html">注册</a>
 <%
   }
 %>

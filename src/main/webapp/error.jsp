@@ -1,6 +1,6 @@
 <%--
   Created by IntelliJ IDEA.
-  User: w'c'f
+  User: Wangchenfei
   Date: 2023/10/17
   Time: 13:22
   To change this template use File | Settings | File Templates.
@@ -11,7 +11,7 @@
     <title>出错</title>
 </head>
 <body>
-登录失败！单击<a href="login.jsp">这里</a>返回
+登录失败！单击<a href="login.html">这里</a>返回
 </body>
 </html>
 

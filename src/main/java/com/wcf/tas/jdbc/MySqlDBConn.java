@@ -22,6 +22,7 @@ public class MySqlDBConn {
     //执行查询类的SQL语句，有返回集
     public ResultSet executeQuery(String sql)
     {
+
         try
         {
             stmt=conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE
@@ -32,6 +33,24 @@ public class MySqlDBConn {
         }
         return rs;					//返回结果集
     }
+
+    //执行插入操作
+public int executeInsert(String sql)
+    {
+        int num=0;
+        try
+        {
+            //创建一个可滚动的，可更新的结果集
+            stmt=conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE
+                    ,ResultSet.CONCUR_UPDATABLE);
+            //执行插入操作
+            num=stmt.executeUpdate(sql);
+        }catch(SQLException e){
+            System.err.println("Data.executeQuery: " + e.getMessage());
+        }
+        return num;
+    }
+
     //关闭对象
     public void closeStmt()
     {

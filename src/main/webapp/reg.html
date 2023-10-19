@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>用户登录</title>
+    <title>用户注册</title>
     <style type="text/css">
         table,tr,td{
             padding: 0;
@@ -19,7 +19,17 @@
             if (isBlankById('userpwd','密码')){
                 return false;
             }
+            if (isBlankById('userpwd','密码')){
+                return false;
+            }
             if (isBlankById('usertype','用户类型')){
+                return false;
+            }
+            var pwdEle =document.getElementById('userpwd');
+            var pwdEleag =document.getElementById('userpwdag');
+            if (pwdEle.value !=pwdEleag.value){
+                alert('两次密码不同，请重新输入');
+                pwdEle.focus()
                 return false;
             }
             document.getElementById(formId).submit();
@@ -64,7 +74,7 @@
                                                            <tr>
                                                                <td style="width: 40px;">&nbsp;</td>
                                                                <td>
-                                                                   <form action="validate.jsp" method="post" id="userLogin">
+                                                                   <form action="dealReg.jsp" method="post" id="userLogin">
                                                                        <table style="width: 100%;height: 180px">
                                                                            <tr>
                                                                                <td>用户名：</td>
@@ -73,6 +83,10 @@
                                                                            <tr>
                                                                                <td>密&nbsp;&nbsp;&nbsp;码：</td>
                                                                                <td><input type="password" id="userpwd" name="userpwd" size="20"/></td>
+                                                                           </tr>
+                                                                           <tr>
+                                                                               <td>确认密码：</td>
+                                                                               <td><input type="password" id="userpwdag" name="userpwdag" size="20"/></td>
                                                                            </tr>
                                                                            <tr>
                                                                                <td>类&nbsp;&nbsp;&nbsp;型：</td>
@@ -87,7 +101,7 @@
                                                                            <tr>
                                                                                <td colspan="2" align="center">
 
-                                                                                   <img src="images/login/dl.gif" alt="login" onclick="operator('userLogin')" style="cursor:pointer">
+                                                                                   <img src="images/login/reg.gif" alt="login" onclick="operator('userLogin')" style="cursor:pointer">
                                                                                </td>
                                                                            </tr>
                                                                        </table>
@@ -108,7 +122,7 @@
                            <td colspan="2"><img src="images/login/lo.gif" width="597px" height="36px"></td>
                        </tr>
                        <tr>
-                           <td colspan="2">如果没有注册，点击这里<a href="reg.html">注册</a>！（21软件2 王晨飞）</td>
+                           <td colspan="2">如果没有注册，点击这里<a href="login.html">登录</a>！（21软件2 王晨飞）</td>
                        </tr>
                    </table>
                </td>
