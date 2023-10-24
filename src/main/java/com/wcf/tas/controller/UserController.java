@@ -2,16 +2,20 @@ package com.wcf.tas.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.wcf.tas.service.impl.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.wcf.tas.dao.impl.UserDAO;
+
 import com.wcf.tas.entity.UserVO;
 import com.wcf.tas.MD5;
 
 @Controller
 public class UserController {
 
+	@Autowired
+	private UserService userService;
 	@RequestMapping("/userLogin.do")
 	public String validatelogin(HttpServletRequest request) throws Exception {
 
@@ -26,8 +30,8 @@ public class UserController {
 		user.setUserPwd(MD5.MD5Encode(pwd));
 		user.setUserType(tp);
 
-		UserDAO dao = new UserDAO();
-		user = dao.validateUser(user);
+		//UserDAO dao = new UserDAO();
+		user = userService.validateUser(user);
 
 		if (user != null) {
 			user.setUserPwd(pwd);

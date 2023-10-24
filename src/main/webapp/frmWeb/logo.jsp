@@ -63,7 +63,7 @@ function refreshDateTime() {
 					<tr height="57">
 						<td style="vertical-align: middle;" class="logo">
 						</td>
-						<td style="text-align: right;" class="login-text">[${username}]&nbsp;&nbsp;<span id="DateTimeCol"></span></td>
+						<td style="text-align: right;" class="login-text">[${user.userName}]&nbsp;&nbsp;<span id="DateTimeCol"></span></td>
 						<td style="width:280px;text-align: center; ">
 							<table style="width:100%;height: 57px;text-align: center; ">
 								<tr height="57">

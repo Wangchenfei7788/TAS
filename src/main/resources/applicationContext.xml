@@ -3,35 +3,39 @@
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xmlns:context="http://www.springframework.org/schema/context"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
-		classpath:http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
 		http://www.springframework.org/schema/context
-		classpath:http://www.springframework.org/schema/context/spring-context-4.0.xsd ">
+		http://www.springframework.org/schema/context/spring-context-4.0.xsd ">
 
 	<!-- 配置MySQL的数据源 -->
 	<context:property-placeholder location="classpath:db.properties"/>
-	<bean id="datasourse" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
-		<property name="driver" value="${driver}"/>
+	<bean id="datasource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+		<property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>
 		<property name="url" value="${url}"/>
 		<property name="username" value="${dbuser}"/>
 		<property name="password" value="${dbpwd}"/>
 	</bean>
 	<!-- 事务管理 -->
 	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-		<property name="dataSource" ref="datasourse"/>
+		<property name="dataSource" ref="datasource"/>
 	</bean>
 	<!-- 需要配置mybaties和要扫描的mapper文件 -->
 	<!-- 配置mybatic的sqlsessionfactory -->
-	<bean id="sqlSessionFactoty" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="datasourse"/>
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="datasource"/>
 		<!-- 自动扫描的mappers文件 -->
 		<property name="mapperLocations" value="classpath:mapper/*.xml"/>
 		<!-- 配置mybatis的配置文件，需要引进创建的mybatis的配置文件 -->
 		<property name="configLocation" value="classpath:mybatis-config.xml"/>
 	</bean>
-
+<context:component-scan base-package="com.wcf.tas.service"/>
 	<bean id="baseDAO" class="com.wcf.tas.dao.BaseDAO">
-		<property name="sqlSessionFct" ref="sqlSessionFactoty"/>
+		<property name="sqlSessionFct" ref="sqlSessionFactory"/>
 	</bean>
 
 	<bean id="userDAO" class="com.wcf.tas.dao.impl.UserDAO" parent="baseDAO"></bean>
+	<bean id="userService" class="com.wcf.tas.service.impl.UserService">
+		<property name="userDAO" ref="userDAO"/>
+	</bean>
+
 </beans>

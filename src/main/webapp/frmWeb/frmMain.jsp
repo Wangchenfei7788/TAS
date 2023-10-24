@@ -20,14 +20,14 @@
     }
 </script>
 <frameset rows="60,30,*,4" frameborder="no" framespacing="0">
-    <frame src="frmWeb/logo.jsp" scrolling="no" name="logeFrame">
-    <frame src="frmWeb/menu_tab.html" scrolling="no" name="menutabFrame">
+    <frame src="logo.jsp" scrolling="no" name="logeFrame">
+    <frame src="menu_tab.html" scrolling="no" name="menutabFrame">
     <frameset cols="180,10,*" id="middleFrame">
-        <frame src="frmWeb/menu.html" scrolling="no" name="menuFrame">
-        <frame src="frmWeb/left_ctrl_bar.html" scrolling="no" name="leftctrlbarFrame">
-        <frame src="frmWeb/welcome.html" scrolling="no" name="mainFrame">
+        <frame src="menu.html" scrolling="no" name="menuFrame">
+        <frame src="left_ctrl_bar.html" scrolling="no" name="leftctrlbarFrame">
+        <frame src="welcome.html" scrolling="no" name="mainFrame">
     </frameset>
-    <frame src="frmWeb/state_bar.html" scrolling="no" name="statebarFrame">
+    <frame src="state_bar.html" scrolling="no" name="statebarFrame">
 </frameset>
 <body>
 
