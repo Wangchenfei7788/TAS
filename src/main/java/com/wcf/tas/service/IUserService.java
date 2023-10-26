@@ -6,5 +6,6 @@ public interface IUserService {
 
 
 	public UserVO validateUser(UserVO user);
-	
+	public int regUser(UserVO user);
+	public boolean isExistUserByName(String username);
 }

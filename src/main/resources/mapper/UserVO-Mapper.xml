@@ -3,8 +3,15 @@
 	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wcf.tas.dao.IUserDAO">
-	<select id="validateUser" parameterType="userVO" resultType="userVO">
+
+	<select id="validateUser" parameterType="UserVO" resultType="UserVO">
 		select * from user where username=#{userName} and userpwd=#{userPwd} and usertype=#{userType}
 	</select>
-	
+	<select id="isExistUserByName" parameterType="String" resultType="UserVO">
+		select * from user where username=#{username}
+	</select>
+	<insert id="addUser" parameterType="UserVO" useGeneratedKeys="true">
+		insert user(username,userpwd,usertype) values(#{userName},#{userPwd},#{userType})
+	</insert>
+
 </mapper>

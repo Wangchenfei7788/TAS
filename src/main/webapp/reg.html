@@ -1,133 +1,190 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Áî®Êà∑Ê≥®ÂÜå</title>
-    <style type="text/css">
-        table,tr,td{
-            padding: 0;
-            margin: 0;
-            border: 0;
-            border-spacing: 0;
-        }
-    </style>
-    <script type="text/javascript">
-        function operator(formId){
-            if (isBlankById('username','Áî®Êà∑Âêç')){
-                return false;
-            }
-            if (isBlankById('userpwd','ÂØÜÁ†Å')){
-                return false;
-            }
-            if (isBlankById('userpwd','ÂØÜÁ†Å')){
-                return false;
-            }
-            if (isBlankById('usertype','Áî®Êà∑Á±ªÂûã')){
-                return false;
-            }
-            var pwdEle =document.getElementById('userpwd');
-            var pwdEleag =document.getElementById('userpwdag');
-            if (pwdEle.value !=pwdEleag.value){
-                alert('‰∏§Ê¨°ÂØÜÁ†Å‰∏çÂêåÔºåËØ∑ÈáçÊñ∞ËæìÂÖ•');
-                pwdEle.focus()
-                return false;
-            }
-            document.getElementById(formId).submit();
+<meta charset="GBK">
+<title>ΩÃ—ß∏®÷˙œµÕ≥”√ªß◊¢≤·</title>
+<style>
+	table,tr,td{
+		padding: 0px;
+		margin: 0 auto;
+		border: 0;
+		border-spacing: 0px;
+	}
+	.dl{
+		font-size: 12px;
 
-        }
-        function  isBlankById(objId,title) {
-            var objEle = document.getElementById(objId);
-            var value = objEle.value;
-            if (value == '') {
-                alert(title + '‰∏çËÉΩ‰∏∫Á©∫ÔºåËØ∑ËæìÂÖ•' + title);
-                objEle.focus();
-                return true;
-            }
-            return false;
-        }
-    </script>
+		line-height: 22px;
+	}
+</style>
+
+<script type="text/javascript">
+	var xmlHttp;
+	function createHttpRequest(){
+		if(window.XMLHttpRequest){
+			xmlHttp=new XMLHttpRequest();
+		}else if(window.ActiveXObject){
+			xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+	}
+	function checkUser(){
+		var username=document.all.username.value;
+		if(username==""){
+			alert("«Î ‰»Î”√ªß√˚£°");
+			return;
+		}
+		createHttpRequest();
+		xmlHttp.onreadystatechange=processor;
+		var url="checkUser.do"
+		xmlHttp.open("post",url,true);
+		xmlHttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=UTF-8");
+		xmlHttp.send("username="+username);
+	}
+	function processor(){
+		if(xmlHttp.readyState==4){
+			if(xmlHttp.status==200){
+				
+				var resText=xmlHttp.responseText;
+				if(resText.indexOf("true")!=-1){
+					//Àµ√˜”√ªß√˚“—æ≠±ª◊¢≤·
+					document.getElementById("msg").innerHTML="”√ªß√˚“—¥Ê‘⁄";
+					document.getElementById("regOper").value="false";
+				}else{
+					document.getElementById("msg").innerHTML="”√ªß√˚ø…”√";
+					document.getElementById("regOper").value="true";
+				}
+			}
+		}
+	}
+	
+</script>
+
+<script type="text/javascript">
+	//∞≤»´—È÷§ ‰»ÎøÚƒ⁄»›≤ªŒ™ø’
+	function operator(formId){
+		if (isBlankById("username","”√ªß√˚")){
+			return false;
+		}
+		if (isBlankById("userpwd","√‹¬Î")){
+			return false;
+		}
+		if (isBlankById("userpwdag","»∑»œ√‹¬Î")){
+			return false;
+		}
+		if (isBlankById("usertype","”√ªß¿‡–Õ")){
+			return false;
+		}
+		var pwdEle=document.getElementById("userpwd");
+		var pwdEleag=document.getElementById("userpwdag");
+		if(pwdEle.value!=pwdEleag.value){
+			alert("√‹¬Î∫Õ»∑»œ√‹¬Î≤ªœ‡Õ¨£¨«Î÷ÿ–¬ ‰»Î");
+			pwdEle.focus();
+			return false;
+		}
+		
+		if(document.getElementById("regOper").value=="false"){
+			alert("”√ªß√˚“—¥Ê‘⁄£¨«Î÷ÿ–¬ ‰»Î£°");
+			document.getElementById("username").focus();
+			return false;
+		}
+		
+		document.getElementById(formId).submit();
+
+	}
+	function isBlankById(objId,title){
+		var objEle=document.getElementById(objId);
+		var value=objEle.value;
+		if(value==""){
+			alert(title+"≤ªƒ‹Œ™ø’£¨«Î ‰»Î"+title);
+			objEle.focus();
+			return true;
+		}
+		return false;
+	}
+</script>
 </head>
-<body background="images/login/oper_area_border_top_line.gif">
-   <div style="text-align: center; margin-top: 12%">
-       <table style="width: 100%; height:100%">
-           <tr>
-               <td style="text-align: center">
-                   <table style="width: 597px;margin: 0 auto">
-                       <tr>
-                           <td style="width: 205px"><img src="images/login/lo_03.gif"height="103px"></td>
-                           <td><img src="images/login/lo_04.gif" width="392px" height="103px"></td>
-                       </tr>
-                       <tr>
-                           <td style="width: 205px";><img src="images/login/lo_06.gif" width="205px" height="211px"></td>
-                           <td>
-                               <table style="width: 100%">
-                                   <tr>
-                                       <td style="width: 0;text-align: left"><img src="images/login/lo_07.gif" width="1px" height="207px"></td>
-                                       <td>
-                                           <table>
-                                               <tr>
-                                                   <td style="height: 15px">&nbsp;</td>
-                                               </tr>
-                                               <tr>
-                                                   <td>
-                                                       <table>
-                                                           <tr>
-                                                               <td style="width: 40px;">&nbsp;</td>
-                                                               <td>
-                                                                   <form action="dealReg.jsp" method="post" id="userLogin">
-                                                                       <table style="width: 100%;height: 180px">
-                                                                           <tr>
-                                                                               <td>Áî®Êà∑ÂêçÔºö</td>
-                                                                               <td> <input type="text" id="username" name="username" size="20"/></td>
-                                                                           </tr>
-                                                                           <tr>
-                                                                               <td>ÂØÜ&nbsp;&nbsp;&nbsp;Á†ÅÔºö</td>
-                                                                               <td><input type="password" id="userpwd" name="userpwd" size="20"/></td>
-                                                                           </tr>
-                                                                           <tr>
-                                                                               <td>Á°ÆËÆ§ÂØÜÁ†ÅÔºö</td>
-                                                                               <td><input type="password" id="userpwdag" name="userpwdag" size="20"/></td>
-                                                                           </tr>
-                                                                           <tr>
-                                                                               <td>Á±ª&nbsp;&nbsp;&nbsp;ÂûãÔºö</td>
-                                                                               <td><select name="usertype" id="usertype">
-                                                                                   <option value="">==ËØ∑ÈÄâÊã©Áî®Êà∑Á±ªÂûã==</option>
-                                                                                   <option value="admin">ÁÆ°ÁêÜÂëò</option>
-                                                                                   <option value="teacher">ÊïôÂ∏à</option>
-                                                                                   <option value="student">Â≠¶Áîü</option>
-
-                                                                               </select></td>
-                                                                           </tr>
-                                                                           <tr>
-                                                                               <td colspan="2" align="center">
-
-                                                                                   <img src="images/login/reg.gif" alt="login" onclick="operator('userLogin')" style="cursor:pointer">
-                                                                               </td>
-                                                                           </tr>
-                                                                       </table>
-                                                                   </form>
-                                                               </td>
-                                                           </tr>
-                                                       </table>
-                                                   </td>
-                                               </tr>
-                                           </table>
-                                       </td>
-                                       <td style="width: 0;text-align:right"><img src="images/login/lo_072.gif" width="1px" height="207px"></td>
-                                   </tr>
-                               </table>
-                           </td>
-                       </tr>
-                       <tr>
-                           <td colspan="2"><img src="images/login/lo.gif" width="597px" height="36px"></td>
-                       </tr>
-                       <tr>
-                           <td colspan="2">Â¶ÇÊûúÊ≤°ÊúâÊ≥®ÂÜåÔºåÁÇπÂáªËøôÈáå<a href="login.html">ÁôªÂΩï</a>ÔºÅÔºà21ËΩØ‰ª∂2 ÁéãÊô®È£ûÔºâ</td>
-                       </tr>
-                   </table>
-               </td>
-           </tr>
-       </table>
-   </div>
+<body background="images/login/oper_area_border_top_line.gif ">
+	<div style="text-align: center; margin: 0 auto;">
+		<table style="width: 99%; height: 100%;">
+			<tr>
+				<td style="text-align: center;">
+					<table style="width: 597px; text-align: center;">
+						<tr>
+							<td style="width: 205px;"><img src="images/login/lo_03.gif" width="205" height="103"></td>
+							<td><img src="images/login/lo_04.gif" width="392" height="103"></td>
+						</tr>
+						<tr>
+							<td><img src="images/login/lo_06.gif" width="205" height="211"></td>
+							<td>
+								<table style="width: 100%;">
+									<tr>
+										<td style="width: 0%; text-align: left;"><img src="images/login/lo_07.gif" width="1" height="211"></td>
+										<td>
+											<table>
+												<tr><td style="height: 15px;">&nbsp;</td></tr>
+												<tr>
+													<td>
+													<table>
+														<tr>
+															<td style="width: 25px;">&nbsp;</td>
+															<td>
+																<form action="regUser.do" method="post" id="userLogin">
+																	<table style="width: 100%; height: 180px;">
+																		<tr>
+																			<td style="width: 80px;" class="dl">”√ªß√˚£∫</td>
+																			<td>
+																				<input type="text" name="username" id="username" style="width: 150px;" onchange="checkUser()"/>
+																				<span id="msg" style="color: red; font-size: 10px;"></span>
+																				<input type="hidden" id="regOper">
+																			</td>
+																		</tr>
+																		<tr>
+																			<td class="dl">√‹&nbsp;&nbsp;¬Î£∫</td>
+																			<td><input type="password" name="userpwd" id="userpwd" style="width: 150px"></td>
+																		</tr>
+																		<tr>
+																			<td class="dl">»∑»œ√‹¬Î£∫</td>
+																			<td><input type="password" name="userpwdag" id="userpwdag" style="width: 150px"></td>
+																		</tr>
+																		<tr>
+																			<td class="dl">¿‡&nbsp;&nbsp;–Õ£∫</td>
+																			<td>
+																				<select name="usertype" style="width: 150px;" id="usertype">
+																					<option value="">==«Î—°‘Ò”√ªß¿‡–Õ==</option>
+																					<option value="admin">π‹¿Ì‘±</option>
+																					<option value="teacher">ΩÃ ¶</option>
+																					<option value="student">—ß…˙</option>
+																				</select>
+																			</td>
+																		</tr>
+																		<tr>
+																			<td colspan="2" align="center">
+																				<!--<input type="image" src="images/login/dl.gif">-->
+																				<img alt="login" src="images/login/reg.gif" onclick="operator('userLogin')" style="cursor: pointer;">
+																			</td>
+																		</tr>
+																	</table>
+																</form>
+															</td>
+														</tr>
+													</table>
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td style="width: 0%; text-align: right;"><img src="images/login/lo_072.gif" width="1" height="211"></td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2"><img src="images/login/lo.gif" width="597" height="36"></td>
+						</tr>
+						<tr>
+							<td colspan="2" style="text-align: center;">»Áπ˚“—æ≠◊¢≤·£¨µ„ª˜<a href="login.html">’‚¿Ô</a>µ«¬º£°£®21º∂»Ìº˛2∞‡ ºæ≤Ω¿ £©</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</div>
 </body>
 </html>
