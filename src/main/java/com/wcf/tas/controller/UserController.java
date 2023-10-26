@@ -19,11 +19,11 @@ public class UserController {
 	@RequestMapping("/userLogin.do")
 	public String validatelogin(HttpServletRequest request) throws Exception {
 
-		request.setCharacterEncoding("UTF-8"); // ???????????
-		String usr = request.getParameter("username"); // ????????????
-		String pwd = request.getParameter("userpwd"); // ???????????
-		String tp = request.getParameter("usertype"); // ???????????
-		boolean validated = false; // ?????????
+		request.setCharacterEncoding("UTF-8");
+		String usr = request.getParameter("username");
+		String pwd = request.getParameter("userpwd");
+		String tp = request.getParameter("usertype");
+		boolean validated = false;
 
 		UserVO user = new UserVO();
 		user.setUserName(usr);
