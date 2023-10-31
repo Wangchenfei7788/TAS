@@ -54,7 +54,7 @@ public class MybatisPlusGenerator {
                             .entity("entity")
                             .service("service")
                             .serviceImpl("service.impl")
-                            .mapper("mapper")
+                            .mapper("dao")
                             .xml("mapper.xml")
                             .controller("controller")
                             .pathInfo(Collections.singletonMap(OutputFile.xml, System.getProperty("user.dir") + "\\src\\main\\resources\\mapper"))

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wcf.tas.dao.IArticleDAO">
+	<insert id="addArticleClass" parameterType="ArticleClassVO" keyProperty="classId" useGeneratedKeys="true">
+		insert into article_class(className,classEnName,classRemark,addUid,addDate,isShow) values(#{className},#{classEnName},#{classRemark},#{addUid},#{addDate},#{isShow})
+	</insert>
+	<update id="modifyArticleClass" parameterType="ArticleClassVO">
+		update article_class set className=#{className},classEnName=#{classEnName},classRemark=#{classRemark},modifyDate=#{modifyDate},isShow=#{isShow} where classId=#{classId}
+	</update>
+	<delete id="deleteArticleClassById" parameterType="int">
+		delete from article_class where classId=#{classId}
+	</delete>
+	<select id="getArticleClassList" resultType="ArticleClassVO">
+		select * from article_class
+	</select>
+	<select id="getArticleClassById" parameterType="int" resultType="ArticleClassVO">
+		select * from article_class where classId=#{classId}
+	</select>
+</mapper>

@@ -3,8 +3,12 @@
   <component name="WebContextManager">
     <option name="state">
       <map>
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/article/articleClassList.jsp" value="file://$PROJECT_DIR$/src/main/webapp/article" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/article/articleInput.jsp" value="file://$PROJECT_DIR$/src/main/webapp/article" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/article/articleList.jsp" value="file://$PROJECT_DIR$/src/main/webapp/article" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/frmWeb/logo.jsp" value="file://$PROJECT_DIR$/src/main/webapp/frmWeb" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/frmWeb/menu.html" value="file://$PROJECT_DIR$/src/main/webapp/frmWeb" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/include/oper_info.jsp" value="file://$PROJECT_DIR$/src/main/webapp/include" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/login.html" value="file://$PROJECT_DIR$/src/main/webapp" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/main.jsp" value="file://$PROJECT_DIR$/src/main/webapp" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/reg.html" value="file://$PROJECT_DIR$/src/main/webapp" />

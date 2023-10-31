@@ -1,10 +1,10 @@
 package com.wcf.tas.service.impl;
 
+import com.wcf.tas.service.IUserService;
 import org.springframework.stereotype.Service;
 
 import com.wcf.tas.dao.impl.UserDAO;
 import com.wcf.tas.entity.UserVO;
-import com.wcf.tas.service.IUserService;
 
 import java.util.ArrayList;
 
